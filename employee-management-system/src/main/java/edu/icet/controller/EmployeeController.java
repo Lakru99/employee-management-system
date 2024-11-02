@@ -21,8 +21,16 @@ public class EmployeeController {
     public void addEmployee(@RequestBody Employee employee){
         employeeService.addEmployee(employee);
     }
-
+    @DeleteMapping("delete-employee/{id}")
     public void deleteEmployeeById(@PathVariable Integer id){
-        
+        employeeService.deleteEmployeeById(id);
+    }
+    @GetMapping("search-emplyee/{id}")
+    public Employee searchEmployeeById(@PathVariable Integer id){
+        return employeeService.searchEmployeeById(id);
+    }
+    @PutMapping("update-employee")
+    public void updateEmployeeById(@RequestBody Employee employee){
+        employeeService.updateEmployeeById(employee);
     }
 }
