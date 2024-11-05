@@ -1,7 +1,7 @@
-package edu.icet.controller;
+package edu.icet.controller.employee;
 
 import edu.icet.dto.Employee;
-import edu.icet.service.EmployeeService;
+import edu.icet.service.employee.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +25,7 @@ public class EmployeeController {
     public void deleteEmployeeById(@PathVariable Integer id){
         employeeService.deleteEmployeeById(id);
     }
-    @GetMapping("search-emplyee/{id}")
+    @GetMapping("search-employee/{id}")
     public Employee searchEmployeeById(@PathVariable Integer id){
         return employeeService.searchEmployeeById(id);
     }

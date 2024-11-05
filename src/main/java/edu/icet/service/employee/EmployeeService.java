@@ -1,4 +1,4 @@
-package edu.icet.service;
+package edu.icet.service.employee;
 
 import edu.icet.dto.Employee;
 

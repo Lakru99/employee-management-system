@@ -3,6 +3,8 @@ package edu.icet.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
+
 @Data
 @Getter
 @Setter
@@ -10,12 +12,12 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "employee")
-public class EmployeeEntity {
+@Table(name = "leave")
+public class LeaveEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer employeeId;
-    private String employeeName;
-    private String employeeAddress;
-    private String employeeEmail;
+    private Integer leaveId;
+    private String leaveName;
+    private LocalDate leaveDate;
+    private String employeeId;
 }
