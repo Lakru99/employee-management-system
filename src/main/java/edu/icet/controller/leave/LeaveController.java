@@ -14,23 +14,24 @@ import java.util.List;
 @CrossOrigin
 public class LeaveController {
     final LeaveService leaveService;
-    @GetMapping("get-all")
+    @GetMapping("/get-all")
     public List<Leave> getAll(){
         return leaveService.getAll();
     }
     @PostMapping("/add-leave")
     public void addLeave(@RequestBody Leave leave){
+
         leaveService.addLeave(leave);
     }
-    @DeleteMapping("delete-leave/{id}")
+    @DeleteMapping("/delete-leave/{id}")
     public void deleteLeaveById(@PathVariable Integer id){
         leaveService.deleteLeaveById(id);
     }
-    @GetMapping("search-leave/{id}")
+    @GetMapping("/search-leave/{id}")
     public Leave searchLeaveById(@PathVariable Integer id){
         return leaveService.searchLeaveById(id);
     }
-    @PutMapping("update-leave")
+    @PutMapping("/update-leave")
     public void updateLeaveById(@RequestBody Leave leave){
         leaveService.updateLeaveById(leave);
     }

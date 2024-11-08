@@ -3,8 +3,6 @@ package edu.icet.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDate;
-
 @Data
 @Getter
 @Setter
@@ -13,11 +11,12 @@ import java.time.LocalDate;
 @ToString
 @Entity
 @Table
-public class LeaveEntity {
+public class TaskEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer leaveId;
 
-    private String leaveName;
-    private LocalDate leaveDate;
+    private Integer taskId;
+    private String taskName;
+    private String taskDescription;
+    private boolean taskStates;
 }

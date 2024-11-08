@@ -14,5 +14,5 @@ public class Leave {
     private Integer leaveId;
     private String leaveName;
     private LocalDate leaveDate;
-    private String employeeId;
+
 }
