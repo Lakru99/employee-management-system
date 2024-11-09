@@ -8,3 +8,6 @@ spring:
     hibernate:
       ddl-auto: create
 
+springdoc:
+  swagger-ui:
+    enabled=true:

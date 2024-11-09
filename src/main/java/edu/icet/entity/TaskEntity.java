@@ -18,5 +18,5 @@ public class TaskEntity {
     private Integer taskId;
     private String taskName;
     private String taskDescription;
-    private boolean taskStates;
+    private String taskStates;
 }
